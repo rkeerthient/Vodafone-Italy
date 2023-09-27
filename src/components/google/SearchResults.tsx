@@ -1,11 +1,5 @@
 import { useChatState } from "@yext/chat-headless-react";
-import {
-  SearchResultsSchema,
-  ProductDataSchema,
-} from "../../schema/SearchResults";
 import { motion } from "framer-motion";
-import { Stars } from "./Stars";
-import { CheckIcon } from "@heroicons/react/20/solid";
 import Map, { Marker } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { MdDirections } from "react-icons/md";
@@ -15,10 +9,6 @@ import FAQCard from "../FAQCard";
 export default function SearchResults() {
   const queryResult = useChatState((s) => s.conversation.notes?.queryResult);
   const isLoading = useChatState((s) => s.conversation.isLoading);
-
-  // if (queryResult && !parsedResults.success) {
-  //   console.log(parsedResults.error);
-  // }
 
   return (
     <div className="w-full flex flex-col gap-y-6">
